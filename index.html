@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portofolio jasa kelola Instagram & TikTok untuk UMKM: contoh feed, carousel, Reels, story, strategi, dan caption.">
+<meta property="og:title" content="LeonardAxelW Portofolio · Kelola Sosmed UMKM">
+<meta property="og:description" content="Contoh kerja kelola Instagram & TikTok untuk UMKM: kedai kopi, barbershop, laundry.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://leonardaxelw.github.io/">
+<meta property="og:image" content="https://leonardaxelw.github.io/preview.jpg">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="900">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<title>LeonardAxelW Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&family=League+Gothic&family=Nunito:wght@800;900&family=Playfair+Display:ital,wght@1,800&display=swap">
+<style>
+/* Layout: a neutral studio wall; each client gets a full-width band in its own brand colours, phone profile on one side, the plan on the other. */
+:root {
+  --paper: #f3f2ee; --ink: #19191b; --muted: #66655f; --line: #dcdad3; --card: #ffffff; --chip: #e9e7e1;
+  --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r: 22px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #141414; --ink: #eeede9; --muted: #a3a29c; --line: #2e2d2a; --card: #1e1e1c; --chip: #262624; color-scheme: dark; } }
+:root[data-theme="dark"] { --paper: #141414; --ink: #eeede9; --muted: #a3a29c; --line: #2e2d2a; --card: #1e1e1c; --chip: #262624; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.55; }
+img, video { max-width: 100%; display: block; }
+a { color: inherit; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; }
+h1, h2, h3 { font-family: var(--f-display); font-stretch: 125%; font-weight: 800; letter-spacing: -0.02em; line-height: 1.02; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid #4c8dff; outline-offset: 2px; border-radius: 6px; }
+
+/* top bar */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 18px; }
+.mark { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-display); font-stretch: 125%; font-weight: 800; font-size: 15px; letter-spacing: -0.01em; text-decoration: none; }
+.mark i { width: 26px; height: 26px; border-radius: 8px; background: var(--ink); display: grid; place-items: center; }
+.mark i::before { content: ""; width: 12px; height: 12px; border-radius: 3px; background: var(--paper); box-shadow: 5px 5px 0 -2px var(--paper); }
+.nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav a { text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 12px; border-radius: 999px; }
+.nav a:hover { background: var(--chip); }
+@media (max-width: 760px) { .nav { display: none; } }
+.btn { display: inline-flex; align-items: center; gap: 10px; border: 0; border-radius: 999px; padding: 13px 20px; font-weight: 700; font-size: 15px; text-decoration: none; background: var(--ink); color: var(--paper); }
+.btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--line); }
+.btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; padding-block: 36px 56px; }
+.hero h1 { font-size: clamp(38px, 5.6vw, 76px); }
+.hero h1 em { font-style: normal; background: linear-gradient(transparent 62%, #f4b331 62%, #f4b331 90%, transparent 90%); }
+.lede { margin-top: 20px; font-size: 18px; color: var(--muted); max-width: 54ch; }
+.hero-cta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; }
+.facts { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 8px; }
+.facts span { background: var(--chip); border-radius: 999px; padding: 7px 12px; font-size: 13px; font-weight: 600; }
+.fan { position: relative; height: 470px; }
+.fan a { position: absolute; top: 40px; width: 34%; border-radius: 26px; padding: 10px; text-decoration: none; box-shadow: 0 30px 60px -30px rgba(0,0,0,.45); transition: transform .35s cubic-bezier(.2,.9,.3,1.2); }
+.fan a:nth-child(1) { left: 0%; top: 50px; transform: rotate(-8deg); background: #1f4433; }
+.fan a:nth-child(2) { left: 22%; top: 10px; z-index: 2; transform: rotate(-3deg); background: #141414; }
+.fan a:nth-child(3) { left: 44%; top: 0; z-index: 3; transform: rotate(3deg); background: #24170f; }
+.fan a:nth-child(4) { left: 66%; top: 50px; z-index: 2; transform: rotate(8deg); background: #0f5e5c; }
+.fan a:hover { transform: rotate(0) translateY(-10px); z-index: 5; }
+.fan .g9 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; border-radius: 16px; overflow: hidden; }
+.fan .g9 img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.fan .lbl { display: flex; justify-content: space-between; align-items: center; color: #fff; padding: 10px 6px 2px; font-size: 13px; font-weight: 700; }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .fan { height: 360px; max-width: 520px; width: 100%; margin: 0 auto; }
+  .fan a { width: 34%; }
+  .fan a:nth-child(1) { left: 0; } .fan a:nth-child(2) { left: 22%; } .fan a:nth-child(3) { left: 44%; } .fan a:nth-child(4) { left: 66%; }
+}
+.note { margin-top: 18px; font-size: 13px; color: var(--muted); max-width: 60ch; }
+
+/* brand bands */
+.band { background: var(--b-bg); color: var(--b-fg); padding-block: 72px; }
+.kp { --b-bg: #24170f; --b-fg: #faf5ec; --b-acc: #f4b331; --b-mut: #d3c4b1; --b-card: #33241a; --b-line: #4a3628; }
+.pr { --b-bg: #141414; --b-fg: #f0eee9; --b-acc: #e04a3e; --b-mut: #aeaaa2; --b-card: #1f1f1f; --b-line: #333; }
+.kt { --b-bg: #1f4433; --b-fg: #f4ecdf; --b-acc: #f2a46e; --b-mut: #c3d3c4; --b-card: #285641; --b-line: #3a6b55; }
+.wl { --b-bg: #0f5e5c; --b-fg: #ffffff; --b-acc: #ffd24d; --b-mut: #cdefe6; --b-card: #0b4c4a; --b-line: #2b7472; }
+.case { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 56px; align-items: start; }
+@media (max-width: 960px) { .case { grid-template-columns: 1fr; } .case .phone-col { order: -1; justify-self: center; } }
+.case-head { display: flex; align-items: center; gap: 16px; }
+.avatar { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; flex: none; background: var(--b-card); box-shadow: inset 0 0 0 2px var(--b-line); }
+.bname { font-size: clamp(40px, 6vw, 64px); line-height: .95; }
+.kp .bname { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 800; font-stretch: normal; letter-spacing: -0.01em; }
+.pr .bname { font-family: "League Gothic", "Arial Narrow", sans-serif; font-weight: 400; font-stretch: normal; letter-spacing: .01em; text-transform: uppercase; font-size: clamp(52px, 8vw, 86px); }
+.kt .bname { font-family: var(--f-display); font-weight: 900; font-stretch: 100%; letter-spacing: -0.04em; text-transform: lowercase; }
+.wl .bname { font-family: "Nunito", system-ui, sans-serif; font-weight: 900; font-stretch: normal; letter-spacing: -0.03em; }
+.kind { color: var(--b-mut); margin-top: 6px; }
+.kind b { color: var(--b-acc); font-weight: 600; }
+.pitch { margin-top: 26px; font-size: 19px; line-height: 1.5; max-width: 52ch; }
+.blocks { margin-top: 30px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 620px) { .blocks { grid-template-columns: 1fr; } }
+.blk { background: var(--b-card); border-radius: var(--r); padding: 20px 22px; min-width: 0; }
+.blk.wide { grid-column: 1 / -1; }
+.blk h3 { font-family: var(--f-mono); font-stretch: normal; font-weight: 500; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--b-acc); margin-bottom: 12px; }
+.blk ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.bars { display: grid; gap: 9px; }
+.bar { display: grid; grid-template-columns: 150px 1fr 40px; align-items: center; gap: 10px; font-size: 14px; }
+.bar i { height: 10px; border-radius: 6px; background: var(--b-acc); display: block; }
+.bar span:last-child { text-align: right; font-family: var(--f-mono); font-size: 13px; font-variant-numeric: tabular-nums; color: var(--b-mut); }
+@media (max-width: 420px) { .bar { grid-template-columns: 110px 1fr 36px; } }
+.week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.week div { border-radius: 12px; padding: 8px 4px; text-align: center; background: color-mix(in srgb, var(--b-fg) 7%, transparent); }
+.week b { display: block; font-family: var(--f-mono); font-size: 11px; font-weight: 500; color: var(--b-mut); text-transform: uppercase; }
+.week span { display: block; font-size: 12px; font-weight: 700; margin-top: 3px; }
+.week .on span { color: var(--b-acc); }
+.tone q { display: block; font-size: 20px; font-weight: 700; margin-top: 4px; quotes: "\201C" "\201D"; }
+.cap { white-space: pre-line; font-size: 15px; }
+.cap-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }
+.cap-row h3 { margin: 0; }
+.copy { border: 0; border-radius: 999px; padding: 6px 12px; font-size: 12.5px; font-weight: 700; background: var(--b-acc); color: var(--b-bg); }
+.stories { margin-top: 14px; display: flex; gap: 10px; }
+.stories button { border: 0; padding: 0; background: none; border-radius: 14px; overflow: hidden; width: 92px; box-shadow: 0 0 0 2px var(--b-acc); }
+.stories img { width: 100%; aspect-ratio: 9/16; object-fit: cover; }
+
+/* phone profile */
+.phone { width: 100%; max-width: 380px; background: #0b0b0c; border-radius: 46px; padding: 12px; box-shadow: 0 0 0 2px #2b2b30, 0 50px 90px -40px rgba(0,0,0,.7); }
+.screen { background: #fff; color: #111; border-radius: 36px; overflow: hidden; font-size: 13px; line-height: 1.4; }
+.sbar { display: flex; justify-content: space-between; padding: 12px 22px 4px; font-weight: 700; font-size: 12px; }
+.ptop { display: flex; justify-content: space-between; align-items: center; padding: 6px 16px; font-weight: 800; font-size: 16px; }
+.ptop .ic { display: flex; gap: 14px; }
+.ptop .ic i { width: 18px; height: 18px; border: 2px solid #111; border-radius: 5px; display: block; }
+.pro { display: flex; gap: 14px; align-items: center; padding: 6px 16px 0; }
+.pro .av { width: 74px; height: 74px; border-radius: 50%; display: grid; place-items: center; flex: none; box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--b-acc); background: var(--b-bg); }
+.pro .nm { font-weight: 800; font-size: 15px; }
+.pro .ct { color: #737373; font-size: 12.5px; }
+.bio { padding: 8px 16px 0; white-space: pre-line; }
+.pbtn { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 10px 16px 0; }
+.pbtn span { background: #efefef; border-radius: 9px; text-align: center; padding: 7px 0; font-weight: 700; font-size: 12.5px; }
+.pbtn span:first-child { background: #1a1a1a; color: #fff; }
+.hls { display: flex; gap: 12px; padding: 14px 16px 8px; overflow: hidden; }
+.hls button { width: 58px; text-align: center; font-size: 11px; flex: none; border: 0; padding: 0; background: none; color: #111; }
+.hls i { width: 54px; height: 54px; border-radius: 50%; display: block; margin: 0 auto 4px; background: var(--b-bg) center/cover; border: 3px solid #fff; outline: 2px solid #c9c9c9; transition: transform .2s ease, outline-color .2s ease; }
+.hls button:hover i { transform: scale(1.06); outline-color: #111; }
+.shared { height: 82vh; max-height: 760px; aspect-ratio: 9/16; max-width: 100%; background: var(--b-bg); display: grid; place-items: center; padding: 0 7%; }
+.vmedia .shared img { max-height: none; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 22px 44px rgba(0,0,0,.4); }
+.tabs { display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 1px solid #eee; }
+.tabs span { display: grid; place-items: center; padding: 9px 0; }
+.tabs span:first-child { box-shadow: inset 0 -2px 0 #111; }
+.tabs svg { width: 20px; height: 20px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.tile { position: relative; border: 0; padding: 0; background: #ddd; aspect-ratio: 3/4; overflow: hidden; }
+.tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.tile:hover img { transform: scale(1.05); }
+.tile .ty { position: absolute; right: 6px; top: 6px; width: 18px; height: 18px; color: #fff; filter: drop-shadow(0 1px 2px rgba(0,0,0,.6)); }
+.hint { text-align: center; color: var(--b-mut); font-size: 13px; margin-top: 12px; }
+
+/* process + cta */
+.sec { padding-block: 80px; }
+.sec-head { max-width: 720px; margin-bottom: 34px; }
+.sec-head h2 { font-size: clamp(30px, 4.4vw, 52px); }
+.sec-head p { margin-top: 14px; color: var(--muted); font-size: 17px; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; counter-reset: s; }
+@media (max-width: 860px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+.steps li { background: var(--card); border-radius: var(--r); padding: 22px; box-shadow: inset 0 0 0 1.5px var(--line); counter-increment: s; }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: var(--paper); font-weight: 800; margin-bottom: 14px; }
+.steps h3 { font-size: 19px; font-stretch: 112%; margin-bottom: 6px; }
+.steps p { color: var(--muted); font-size: 15px; }
+.cta { background: var(--ink); color: var(--paper); border-radius: 30px; padding: clamp(28px, 5vw, 56px); display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
+@media (max-width: 760px) { .cta { grid-template-columns: 1fr; } }
+.cta h2 { font-size: clamp(30px, 4.4vw, 52px); }
+.cta p { margin-top: 12px; opacity: .75; }
+.cta .btn { background: #25d366; color: #0b2b16; }
+.cta .wa-note { margin-top: 10px; font-size: 13px; opacity: .7; }
+footer { padding-block: 34px 48px; color: var(--muted); font-size: 13px; }
+
+/* viewer */
+dialog#viewer { border: 0; padding: 0; background: transparent; max-width: min(980px, 96vw); width: 100%; }
+dialog#viewer::backdrop { background: rgba(10,10,10,.82); }
+.vbox { display: grid; grid-template-columns: minmax(0, 1fr) 320px; background: var(--card); color: var(--ink); border-radius: 22px; overflow: hidden; max-height: 92vh; }
+@media (max-width: 760px) { .vbox { grid-template-columns: 1fr; max-height: none; } }
+.vmedia { position: relative; background: #000; display: grid; place-items: center; min-height: 300px; }
+.vmedia img, .vmedia video { max-height: 86vh; width: auto; max-width: 100%; }
+.vmedia .story img { max-height: 82vh; }
+.vside { padding: 22px; overflow: auto; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.vside .who { display: flex; align-items: center; gap: 10px; font-weight: 800; }
+.vside .who .av { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--b-bg); }
+.vside .cap { color: var(--ink); }
+.vside .kind2 { color: var(--muted); }
+.vclose { position: absolute; right: max(12px, env(safe-area-inset-right, 0px)); top: max(12px, env(safe-area-inset-top, 0px)); z-index: 5; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); color: #111; font-size: 22px; line-height: 1; }
+.nav2 { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,.9); color: #111; font-size: 18px; }
+.nav2.prev { left: 10px; } .nav2.next { right: 10px; }
+.dots { position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; }
+.dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.45); }
+.dots i.on { background: #fff; }
+.pbars { position: absolute; left: 10px; right: 10px; top: 10px; display: flex; gap: 4px; z-index: 2; }
+.pbars span { flex: 1; height: 3px; border-radius: 2px; background: rgba(255,255,255,.4); overflow: hidden; }
+.pbars span i { display: block; height: 100%; width: 0; background: #fff; }
+.pbars span.done i { width: 100%; }
+.pbars span.run i { animation: fill 5s linear forwards; }
+@keyframes fill { to { width: 100%; } }
+@media (prefers-reduced-motion: reduce) { .fan a, .tile img { transition: none; } .pbars span.run i { animation-duration: .01s; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top"><i></i>LeonardAxelW</a>
+    <nav class="nav" aria-label="Bagian halaman">
+      <a href="#kopi-teras">Kopi Teras</a><a href="#pangkas-rapi">Pangkas Rapi</a><a href="#kopi-pagi">Kopi Pagi</a><a href="#wangi-lagi">Wangi Lagi</a><a href="#cara-kerja">Cara kerja</a>
+    </nav>
+    <a class="btn" href="#kontak">Konsultasi</a>
+  </header>
+
+  <section class="hero" id="top">
+    <div>
+      <span class="mono" style="color: var(--muted)">LeonardAxelW · Portofolio kelola Instagram &amp; TikTok UMKM</span>
+      <h1 style="margin-top: 14px">Feed rapi. Posting rutin. Owner <em>fokus jualan.</em></h1>
+      <p class="lede">Dari rencana konten, desain feed, video Reels, caption, sampai posting dan balas komentar. Setiap usaha dapat gaya visual sendiri, bukan template yang sama.</p>
+      <div class="hero-cta"><a class="btn" href="#kopi-teras">Lihat contoh kerja</a><a class="btn ghost" href="#cara-kerja">Cara kerjanya</a></div>
+      <div class="facts"><span>4 contoh brand</span><span>67 desain feed &amp; story</span><span>4 video Reels</span><span>Caption + jadwal posting</span></div>
+      <p class="note">Empat brand di halaman ini contoh konsep untuk menunjukkan cara kerja dan gaya visual, bukan klien nyata. Foto kedua kafe memakai foto stok Unsplash. Render 3D dan ilustrasi dibuat sendiri.</p>
+    </div>
+    <div class="fan" id="fan"></div>
+  </section>
+</div>
+
+<section class="band kt" id="kopi-teras" data-brand="kt"></section>
+<section class="band pr" id="pangkas-rapi" data-brand="pr"></section>
+<section class="band kp" id="kopi-pagi" data-brand="kp"></section>
+<section class="band wl" id="wangi-lagi" data-brand="wl"></section>
+
+<div class="wrap">
+  <section class="sec" id="cara-kerja">
+    <div class="sec-head">
+      <span class="mono" style="color: var(--muted)">Cara kerja</span>
+      <h2 style="margin-top: 10px">Yang dikerjakan setiap bulan</h2>
+      <p>Owner cukup kasih info usaha dan setujui konten. Sisanya diurus sampai tayang.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Kenalan &amp; cek akun</h3><p>Ngobrol soal usaha, pelanggan, dan target. Akun yang ada dicek: apa yang jalan, apa yang belum.</p></li>
+      <li><h3>Rencana konten bulanan</h3><p>Pilar konten, jadwal posting, dan ide per tanggal. Dikirim di awal bulan.</p></li>
+      <li><h3>Produksi</h3><p>Desain feed, carousel, story, video Reels, dan caption. Foto atau video dari HP-mu ikut diedit.</p></li>
+      <li><h3>Kamu setujui dulu</h3><p>Semua konten dikirim sebelum tayang. Ada yang kurang pas, langsung direvisi.</p></li>
+      <li><h3>Posting &amp; balas komentar</h3><p>Diposting di jam yang pas. Komentar dan DM dibalas sesuai gaya bahasa usahamu.</p></li>
+      <li><h3>Laporan bulanan</h3><p>Jangkauan, interaksi, post terbaik, dan rencana perbaikan buat bulan berikutnya.</p></li>
+    </ol>
+  </section>
+
+  <section class="sec" id="kontak" style="padding-top: 0">
+    <div class="cta">
+      <div>
+        <h2>Mau feed usahamu kayak gini?</h2>
+        <p>Ceritain usahamu. Konsultasi pertama gratis, sekalian dapat ide konten buat minggu depan.</p>
+      </div>
+      <div>
+        <a class="btn" id="wa" href="#kontak">Chat via WhatsApp</a>
+        <p class="wa-note" id="wa-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>LeonardAxelW Portofolio. Semua brand di halaman ini contoh konsep (spec work). Foto kafe: Unsplash. Render 3D, ilustrasi, desain, dan video dibuat sendiri. © 2026</footer>
+</div>
+
+<dialog id="viewer" aria-label="Lihat konten">
+  <button class="vclose" id="vclose" aria-label="Tutup">×</button>
+  <div class="vbox" id="vbox"></div>
+</dialog>
+
+<script>
+const WA_NUMBER = "6285239149142"; // nomor WhatsApp, format internasional tanpa +
+const WA_DISPLAY = "0852-3914-9142";
+
+const ICON = {
+  reel: '<svg class="ty" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8.5h18M8 3l3 5.5M14 3l3 5.5"/><path d="M10 12v5l4.5-2.5z" fill="currentColor"/></svg>',
+  carousel: '<svg class="ty" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="7" y="3" width="14" height="14" rx="3"/><path d="M17 21H6a3 3 0 0 1-3-3V7"/></svg>'
+};
+const AV = {
+  kt: '<svg viewBox="0 0 160 160" width="62%" height="62%" style="border-radius:8px"><rect width="160" height="160" fill="#f4ecdf"/><g fill="#c4532d"><path d="M0 0h40a40 40 0 0 1-40 40z"/><path d="M160 0v40a40 40 0 0 1-40-40z"/><path d="M0 160v-40a40 40 0 0 1 40 40z"/><path d="M160 160h-40a40 40 0 0 1 40-40z"/></g><path d="M80 34l46 46-46 46-46-46z" fill="#1f4433"/><circle cx="80" cy="80" r="14" fill="#f4ecdf"/></svg>',
+  kp: '<svg viewBox="0 0 64 64" width="60%" height="60%"><path d="M13 44 A19 19 0 0 1 51 44 Z" fill="#f4b331"/><rect x="6" y="46" width="52" height="4.5" rx="2.2" fill="#faf5ec"/><path d="M26 30c-3.5-4.5 3.5-7 0-12M37 30c-3.5-4.5 3.5-7 0-12" stroke="#faf5ec" stroke-width="3.6" fill="none" stroke-linecap="round"/></svg>',
+  pr: '<span style="width:22%;height:56%;border-radius:999px;border:2px solid #f0eee9;background:repeating-linear-gradient(135deg,#c8382e 0 5px,#fff 5px 9px,#2f5da8 9px 14px,#fff 14px 18px)"></span>',
+  wl: '<svg viewBox="0 0 64 64" width="70%" height="70%"><circle cx="32" cy="32" r="30" fill="#fff"/><path d="M32 13c-8 11-13 17-13 24a13 13 0 0 0 26 0c0-7-5-13-13-24z" fill="#0f5e5c"/><path d="M47 13q1 6 6 7-5 1-6 7-1-6-6-7 5-1 6-7z" fill="#ffd24d"/></svg>'
+};
+const M = (f) => "media/" + f;
+const BRANDS = {
+  kt: {
+    name: "Kopi Teras", handle: "kopiteras", kind: "Kedai kopi komunitas", look: "Gaya dokumenter",
+    pitch: "Kedai kopi kecil di mulut gang. Terasnya jadi tempat ngumpul warga: lari pagi, kelas seduh, atau sekadar numpang adem.",
+    bio: "Kedai kopi · teras buat warga\nKopi susu, seduh manual, roti\nSelasa–Minggu 06.30–22.00\nLari pagi bareng tiap Minggu 05.30",
+    hl: [["Jam buka", "kt-s5.jpg", ["kt-st1.jpg", "kt-s5.jpg"]], ["Menu", "kt-s1.jpg", ["kt-s1.jpg", "kt-s6.jpg"]], ["Kegiatan", "kt-l1.jpg", ["kt-st2.jpg", "kt-l1.jpg", "kt-s3.jpg"]], ["Arsip", "kt-c1.jpg", ["kt-c2.jpg", "kt-c3.jpg", "kt-c4.jpg", "kt-c5.jpg"]]],
+    challenge: ["Kedai kecil, kalah saing sama kafe besar yang budget promosinya gede.", "Pelanggan datang buat kopi, tapi belum punya alasan buat balik lagi."],
+    approach: ["Ceritain orang dan kegiatan di sekitar teras, bukan cuma produk.", "Format arsip foto dengan cap tanggal, biar terasa seperti dokumentasi asli.", "Kegiatan rutin (lari pagi, kelas seduh) jadi alasan buat balik."],
+    pillars: [["Cerita teras & warga", 30], ["Kegiatan bareng", 25], ["Di balik bar", 20], ["Menu & biji kopi", 15], ["Info teras", 10]],
+    week: [["Sen", "Story"], ["Sel", "Post"], ["Rab", "Carousel"], ["Kam", "Reels"], ["Jum", "Post"], ["Sab", "Carousel"], ["Min", "Reels"]],
+    tone: "Akrab dan apa adanya, kayak ngobrol sama tetangga.", toneEx: "Sampai ketemu besok pagi di teras.",
+    grid: [
+      { t: "reel", img: "kt-r1.jpg", video: "reel-kopi-teras.mp4", cap: "Dari gang yang masih sepi jam 6 pagi sampai gelas pertama jam 06.30. Ini pagi di teras kami.\n\n#kopiteras #ngopipagi #kopisusu" },
+      { t: "carousel", img: "kt-c1.jpg", slides: ["kt-c1.jpg", "kt-c2.jpg", "kt-c3.jpg", "kt-c4.jpg", "kt-c5.jpg"], cap: "Arsip Teras No. 07. Gang depan yang masih sepi, bangku teras yang penuh, pot baru di pojok, dan lampu terakhir jam 10 malam. Makasih udah mampir minggu ini.\n\n#kopiteras #arsipteras" },
+      { t: "post", img: "kt-s1.jpg", cap: "Kopi Susu Teras, 18rb. Espresso, susu segar, dan gula aren dari pasar sebelah.\n\n#kopiteras #kopisusu" },
+      { t: "carousel", img: "kt-l1.jpg", slides: ["kt-l1.jpg", "kt-l2.jpg", "kt-l3.jpg", "kt-l4.jpg"], cap: "Lari Pagi Bareng #4 udah beres. Rute 5 km santai, start dan finish di teras, ditutup es kopi susu buat semua peserta. Minggu depan ikut?\n\n#kopiteras #laripagi" },
+      { t: "post", img: "kt-s2.jpg", cap: "Yang bikin kopimu pagi ini. Barista kami udah di balik bar dari jam 6, biar kamu ga nunggu lama.\n\n#kopiteras #dibalikbar" },
+      { t: "post", img: "kt-s3.jpg", cap: "Kelas Seduh Manual, Sabtu jam 10.00. Gratis, cuma 8 kursi. Alat disiapin, kamu tinggal datang. Daftar lewat DM ya.\n\n#kopiteras #kelasseduh" },
+      { t: "post", img: "kt-s4.jpg", cap: "Papan pesan teras minggu ini. Punya pesan buat warga lain? Titip di komentar, nanti kami tempel.\n\n#kopiteras" },
+      { t: "post", img: "kt-s5.jpg", cap: "Teras buka Selasa–Minggu, 06.30–22.00. Senin kami istirahat dulu.\n\n#kopiteras" },
+      { t: "post", img: "kt-s6.jpg", cap: "Biji kopi minggu ini: Flores Bajawa. Ada rasa cokelat, gula aren, dan sedikit rempah. Enak buat seduh manual.\n\n#kopiteras #kopinusantara" }
+    ],
+    stories: ["kt-st1.jpg", "kt-st2.jpg", "kt-st3.jpg"]
+  },
+  kp: {
+    name: "Kopi Pagi", handle: "kopipagi.id", kind: "Kedai kopi", look: "Gaya foto",
+    pitch: "Kedai kopi dekat perkantoran. Targetnya pekerja yang butuh kopi sebelum absen dan tempat kerja di sore hari.",
+    bio: "Kedai kopi\nKopi susu, americano, roti bakar.\nBuka setiap hari 07.00–21.00\nPesan antar via WhatsApp",
+    hl: [["Menu", "kp-c2.jpg", ["kp-st1.jpg", "kp-c2.jpg", "kp-c3.jpg", "kp-c4.jpg"]], ["Promo", "kp-s3.jpg", ["kp-st2.jpg", "kp-s3.jpg"]], ["Suasana", "kp-s5.jpg", ["kp-s5.jpg", "kp-s7.jpg"]], ["Jam buka", "kp-s2.jpg", ["kp-s2.jpg", "kp-s7.jpg"]]],
+    challenge: ["Ramai di jam pagi, sepi di sore hari.", "Feed cuma foto menu tanpa alasan untuk datang."],
+    approach: ["Foto produk close-up dengan warna hangat yang sama di semua post.", "Konten alasan datang: jam buka, colokan, promo pagi.", "Satu post interaksi per minggu biar komentar jalan."],
+    pillars: [["Menu & produk", 40], ["Suasana & cerita", 25], ["Promo", 15], ["Edukasi kopi", 10], ["Interaksi", 10]],
+    week: [["Sen", "Reels"], ["Sel", "Post"], ["Rab", "Carousel"], ["Kam", "Post"], ["Jum", "Reels"], ["Sab", "Post"], ["Min", "Story"]],
+    tone: "Hangat dan santai, pakai “kamu”.", toneEx: "Kopinya siap sebelum kamu.",
+    grid: [
+      { t: "reel", img: "kp-r1.jpg", video: "reel-kopi-pagi.mp4", cap: "POV: kantormu deket Kopi Pagi. Pagi ngopi, siang meeting, pulang masih bisa nongkrong.\nBuka 07.00–21.00.\n\n#kopipagi #kopisusu #ngopipagi" },
+      { t: "post", img: "kp-s1.jpg", cap: "Es batunya kami bikin dari kopi, jadi rasanya tetap mantap sampai tegukan terakhir. Udah pernah coba?\n\n#kopipagi #eskopisusu" },
+      { t: "carousel", img: "kp-c1.jpg", slides: ["kp-c1.jpg", "kp-c2.jpg", "kp-c3.jpg", "kp-c4.jpg", "kp-c5.jpg"], cap: "Bingung tiap kali di depan kasir? Geser sampai habis, terus simpan post ini buat kunjungan berikutnya.\n\n#kopipagi #menukopi" },
+      { t: "post", img: "kp-s4.jpg", cap: "Senin, kamu kuat. Tapi dua gelas lebih kuat lagi. Tag teman yang Senin-nya udah berat dari pagi.\n\n#kopipagi #senin" },
+      { t: "post", img: "kp-s2.jpg", cap: "Pintu kami buka jam 7 pagi. Mampir sebelum absen, kopinya udah siap.\n\n#kopipagi #buka7pagi" },
+      { t: "post", img: "kp-s6.jpg", cap: "Pilih satu: A untuk tim kopi susu, B untuk tim americano. Jawab di komentar!\n\n#kopipagi #timkopisusu" },
+      { t: "post", img: "kp-s3.jpg", cap: "Paket Pagi: kopi + roti cuma 30rb. Senin–Jumat jam 07.00–09.00. Lumayan buat yang belum sempat sarapan.\n\n#kopipagi #promopagi" },
+      { t: "post", img: "kp-s5.jpg", cap: "Spot favorit buat kerja: pojok jendela, colokan di tiap meja, wifi kencang. Datang pagi biar kebagian.\n\n#kopipagi #wfc" },
+      { t: "post", img: "kp-s7.jpg", cap: "Namanya pagi, tapi sore juga enak. Buka sampai jam 9 malam.\n\n#kopipagi #nongkrongsore" }
+    ],
+    stories: ["kp-st1.jpg", "kp-st2.jpg", "kp-st3.jpg"]
+  },
+  pr: {
+    name: "Pangkas Rapi", handle: "pangkasrapi", kind: "Barbershop", look: "Gaya 3D",
+    pitch: "Barbershop pria di pinggir jalan. Pelanggannya pekerja dan mahasiswa yang ga suka antre lama.",
+    bio: "Barbershop\nPotong rambut pria · 10.00–21.00\nBooking via WA biar ga antre",
+    hl: [["Harga", "pr-s2.jpg", ["pr-s2.jpg"]], ["Booking", "pr-s3.jpg", ["pr-st1.jpg", "pr-s3.jpg", "pr-st3.jpg"]], ["Promo", "pr-s6.jpg", ["pr-s6.jpg"]], ["Tips", "pr-c1.jpg", ["pr-c2.jpg", "pr-c3.jpg", "pr-c4.jpg", "pr-c5.jpg"]]],
+    challenge: ["Pelanggan malas datang karena takut antre.", "Jam siang sampai sore sering sepi."],
+    approach: ["Visual 3D yang khas: kursi merah, lantai kotak-kotak, tiang barber.", "Info praktis yang jelas: harga, jam, cara booking.", "Promo jam sepi untuk mengisi kursi kosong."],
+    pillars: [["Info praktis", 30], ["Layanan", 25], ["Tips rambut", 20], ["Di balik layar", 15], ["Promo", 10]],
+    week: [["Sen", "Post"], ["Sel", "Reels"], ["Rab", "Post"], ["Kam", "Carousel"], ["Jum", "Post"], ["Sab", "Reels"], ["Min", "Story"]],
+    tone: "Tegas, singkat, sedikit jenaka.", toneEx: "Kalau tiangnya muter, kami buka.",
+    grid: [
+      { t: "reel", img: "pr-r1.jpg", video: "reel-pangkas-rapi.mp4", cap: "Dari buka jam 10 sampai lantai disapu jam 9 malam. Ini sehari di Pangkas Rapi.\n\n#pangkasrapi #barbershop #potongrambut" },
+      { t: "post", img: "pr-s1.jpg", cap: "Rapi dalam 30 menit, ga pakai drama. Booking jam kamu lewat WA di bio.\n\n#pangkasrapi #barbershop" },
+      { t: "carousel", img: "pr-c1.jpg", slides: ["pr-c1.jpg", "pr-c2.jpg", "pr-c3.jpg", "pr-c4.jpg", "pr-c5.jpg"], cap: "4 kebiasaan biar potongan rambutmu awet lebih lama. Simpan biar ga lupa.\n\n#pangkasrapi #tipsrambut" },
+      { t: "post", img: "pr-s7.jpg", cap: "Kalau rambut udah nutup kuping, itu tanda. Tag temanmu yang udah waktunya potong.\n\n#pangkasrapi" },
+      { t: "post", img: "pr-s2.jpg", cap: "Harga jelas dari awal. Buka tiap hari 10.00–21.00.\n\n#pangkasrapi #hargapotongrambut" },
+      { t: "post", img: "pr-s3.jpg", cap: "Ga perlu nunggu lama di bangku. Chat WA, pilih jam, datang pas giliranmu.\n\n#pangkasrapi #bookingonline" },
+      { t: "post", img: "pr-s6.jpg", cap: "Jam sepi, harga hemat: Senin–Kamis 13.00–16.00 cuma 30rb.\n\n#pangkasrapi #promobarbershop" },
+      { t: "post", img: "pr-s4.jpg", cap: "Kalau tiangnya muter, berarti kami buka. Sesimpel itu.\n\n#pangkasrapi #barberpole" },
+      { t: "post", img: "pr-s5.jpg", cap: "Jam 9 malam: kursi dilap, lantai disapu. Besok pagi siap buat kamu lagi.\n\n#pangkasrapi #dibaliklayar" }
+    ],
+    stories: ["pr-st1.jpg", "pr-st2.jpg", "pr-st3.jpg"]
+  },
+  wl: {
+    name: "Wangi Lagi", handle: "wangilagi.laundry", kind: "Laundry kiloan", look: "Gaya ilustrasi",
+    pitch: "Laundry kiloan di area kos dan perumahan. Pelanggannya mahasiswa, pekerja, dan keluarga muda.",
+    bio: "Laundry kiloan & satuan\nAntar-jemput gratis min. 5 kg\nSelesai 2 hari · express 6 jam",
+    hl: [["Harga", "wl-s1.jpg", ["wl-s1.jpg"]], ["Tips noda", "wl-c1.jpg", ["wl-c2.jpg", "wl-c3.jpg", "wl-c4.jpg"]], ["Promo", "wl-s4.jpg", ["wl-st3.jpg", "wl-s4.jpg"]], ["Jemput", "wl-s2.jpg", ["wl-st2.jpg", "wl-s2.jpg", "wl-st1.jpg"]]],
+    challenge: ["Orang ragu cuciannya diperlakukan seperti apa.", "Banyak yang belum tahu ada layanan antar-jemput."],
+    approach: ["Ilustrasi yang ramah untuk menjelaskan proses.", "Edukasi perawatan baju yang layak disimpan.", "Update status cucian lewat story biar pelanggan tenang."],
+    pillars: [["Edukasi perawatan", 35], ["Layanan & harga", 25], ["Proses kerja", 20], ["Promo", 10], ["Interaksi", 10]],
+    week: [["Sen", "Post"], ["Sel", "Carousel"], ["Rab", "Reels"], ["Kam", "Post"], ["Jum", "Post"], ["Sab", "Reels"], ["Min", "Story"]],
+    tone: "Ramah, rapi, menenangkan.", toneEx: "Bilang nodanya apa, kami tangani.",
+    grid: [
+      { t: "reel", img: "wl-r1.jpg", video: "reel-wangi-lagi.mp4", cap: "Penasaran 1 kg bajumu diapain aja? Ini 5 langkahnya, dari ditimbang sampai diantar.\n\n#wangilagi #laundrykiloan" },
+      { t: "post", img: "wl-s4.jpg", cap: "Senin Bersih! Diskon 20% semua cucian kiloan, tiap Senin 07.00–20.00.\n\n#wangilagi #promolaundry" },
+      { t: "carousel", img: "wl-c1.jpg", slides: ["wl-c1.jpg", "wl-c2.jpg", "wl-c3.jpg", "wl-c4.jpg", "wl-c5.jpg"], cap: "3 noda paling bandel dan cara ngatasinnya di rumah. Simpan buat jaga-jaga.\n\n#wangilagi #tipsnoda" },
+      { t: "post", img: "wl-s5.jpg", cap: "Dilipat rapi, tinggal masuk lemari. Ga perlu disetrika ulang.\n\n#wangilagi" },
+      { t: "post", img: "wl-s1.jpg", cap: "Daftar harga Wangi Lagi. Antar-jemput gratis minimal 5 kg.\n\n#wangilagi #hargalaundry" },
+      { t: "post", img: "wl-s6.jpg", cap: "Jujur aja: A tim setrika atau B tim langsung pakai? Jawab di komentar.\n\n#wangilagi" },
+      { t: "post", img: "wl-s2.jpg", cap: "Males keluar? Cucian kami jemput dan antar gratis, minimal 5 kg. Chat WA di bio.\n\n#wangilagi #antarjemputlaundry" },
+      { t: "post", img: "wl-s7.jpg", cap: "Musim hujan bukan alasan baju bau apek. Kami keringkan pakai mesin.\n\n#wangilagi #musimhujan" },
+      { t: "post", img: "wl-s3.jpg", cap: "Kenapa baju putih kami pisahin? Biar ga kebawa luntur dari baju warna.\n\n#wangilagi #tipslaundry" }
+    ],
+    stories: ["wl-st1.jpg", "wl-st2.jpg", "wl-st3.jpg"]
+  }
+};
+
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// hero fan
+document.getElementById("fan").innerHTML = ["kt", "pr", "kp", "wl"].map((k) => {
+  const b = BRANDS[k];
+  return `<a href="#${b.name.toLowerCase().replace(/ /g, "-")}" aria-label="Lihat ${esc(b.name)}"><div class="g9">${b.grid.map((g) => `<img src="${M(g.img)}" alt="" loading="lazy">`).join("")}</div><div class="lbl"><span>${esc(b.name)}</span><span class="mono" style="font-size:11px;opacity:.8">${esc(b.look)}</span></div></a>`;
+}).join("");
+
+// brand bands
+document.querySelectorAll(".band").forEach((sec) => {
+  const k = sec.dataset.brand, b = BRANDS[k];
+  const firstCap = b.grid[1].cap;
+  sec.innerHTML = `<div class="wrap"><div class="case">
+    <div>
+      <div class="case-head"><span class="avatar">${AV[k]}</span><div><h2 class="bname">${esc(b.name)}</h2><div class="kind mono">${esc(b.kind)} · <b>${esc(b.look)}</b> · contoh konsep</div></div></div>
+      <p class="pitch">${esc(b.pitch)}</p>
+      <div class="blocks">
+        <div class="blk"><h3>Tantangan umum</h3><ul>${b.challenge.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+        <div class="blk"><h3>Pendekatan</h3><ul>${b.approach.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>
+        <div class="blk"><h3>Porsi pilar konten</h3><div class="bars">${b.pillars.map(([n, v]) => `<div class="bar"><span>${esc(n)}</span><i style="width:${v * 2.2}%"></i><span>${v}%</span></div>`).join("")}</div></div>
+        <div class="blk tone"><h3>Gaya bahasa</h3><p>${esc(b.tone)}</p><q>${esc(b.toneEx)}</q></div>
+        <div class="blk wide"><h3>Jadwal posting mingguan</h3><div class="week">${b.week.map(([d, f]) => `<div class="${f === "Reels" ? "on" : ""}"><b>${d}</b><span>${f}</span></div>`).join("")}</div><p class="mono" style="margin-top:10px;color:var(--b-mut);text-transform:none;letter-spacing:0">Story setiap hari: polling, promo, dan update.</p></div>
+        <div class="blk wide"><div class="cap-row"><h3>Contoh caption</h3><button class="copy" data-copy="${k}">Salin</button></div><p class="cap" id="cap-${k}">${esc(firstCap)}</p></div>
+      </div>
+      <div class="stories" aria-label="Story ${esc(b.name)}">${b.stories.map((s, i) => `<button data-story="${k}" data-i="${i}" aria-label="Lihat story ${i + 1}"><img src="${M(s)}" alt="Story ${i + 1} ${esc(b.name)}" loading="lazy"></button>`).join("")}</div>
+    </div>
+    <div class="phone-col">
+      <div class="phone"><div class="screen">
+        <div class="sbar"><span>09.41</span><span>●●● ▮</span></div>
+        <div class="ptop"><span>${esc(b.handle)}</span><span class="ic"><i></i><i style="border-radius:50%"></i></span></div>
+        <div class="pro"><span class="av">${AV[k]}</span><div><div class="nm">${esc(b.name)}</div><div class="ct">${esc(b.kind)}</div></div></div>
+        <div class="bio">${esc(b.bio)}</div>
+        <div class="pbtn"><span>Ikuti</span><span>WhatsApp</span></div>
+        <div class="hls">${b.hl.map(([n, img], h) => `<button data-hl="${h}" data-k="${k}" aria-label="Buka highlight ${esc(n)}"><i style="background-image:url('${M(img)}')"></i>${esc(n)}</button>`).join("")}</div>
+        <div class="tabs"><span><svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M10 9v6l5-3z"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2"><circle cx="12" cy="9" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span></div>
+        <div class="grid">${b.grid.map((g, i) => `<button class="tile" data-k="${k}" data-i="${i}" aria-label="Buka ${g.t === "reel" ? "Reels" : g.t === "carousel" ? "carousel" : "post"} ${i + 1}"><img src="${M(g.img)}" alt="" loading="lazy">${ICON[g.t] || ""}</button>`).join("")}</div>
+      </div></div>
+      <p class="hint">Ketuk post untuk lihat isi dan caption-nya</p>
+    </div>
+  </div></div>`;
+});
+
+// copy caption
+document.addEventListener("click", async (e) => {
+  const btn = e.target.closest("[data-copy]");
+  if (!btn) return;
+  const text = document.getElementById("cap-" + btn.dataset.copy).textContent;
+  try { await navigator.clipboard.writeText(text); btn.textContent = "Tersalin"; }
+  catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("cap-" + btn.dataset.copy)); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Teks dipilih"; }
+  setTimeout(() => { btn.textContent = "Salin"; }, 1600);
+});
+
+// viewer
+const dlg = document.getElementById("viewer"), vbox = document.getElementById("vbox");
+let storyTimer = null;
+function side(k, title, cap) {
+  const b = BRANDS[k];
+  return `<div class="vside ${k}"><div class="who"><span class="av">${AV[k]}</span><span>${esc(b.handle)}</span></div><p class="kind2 mono">${esc(title)}</p><p class="cap">${esc(cap)}</p></div>`;
+}
+function openPost(k, i) {
+  clearTimeout(storyTimer);
+  const b = BRANDS[k], g = b.grid[i];
+  let media = "";
+  if (g.t === "reel") media = `<video src="${M(g.video)}" poster="${M(g.img)}" controls playsinline autoplay muted loop></video>`;
+  else if (g.t === "carousel") media = `<img id="cimg" src="${M(g.slides[0])}" alt="Slide 1"><button class="nav2 prev" id="cprev" aria-label="Slide sebelumnya">‹</button><button class="nav2 next" id="cnext" aria-label="Slide berikutnya">›</button><div class="dots">${g.slides.map((_, j) => `<i class="${j ? "" : "on"}"></i>`).join("")}</div>`;
+  else media = `<img src="${M(g.img)}" alt="Post ${esc(b.name)}">`;
+  const label = g.t === "reel" ? "Reels · ±15 detik" : g.t === "carousel" ? `Carousel · ${g.slides.length} slide` : "Post feed · 4:5";
+  vbox.className = "vbox " + k;
+  vbox.innerHTML = `<div class="vmedia">${media}</div>` + side(k, label, g.cap);
+  if (g.t === "carousel") {
+    let j = 0; const img = vbox.querySelector("#cimg"), dots = [...vbox.querySelectorAll(".dots i")];
+    const go = (d) => { j = (j + d + g.slides.length) % g.slides.length; img.src = M(g.slides[j]); img.alt = "Slide " + (j + 1); dots.forEach((x, n) => x.classList.toggle("on", n === j)); };
+    vbox.querySelector("#cprev").onclick = () => go(-1); vbox.querySelector("#cnext").onclick = () => go(1);
+  }
+  if (!dlg.open) dlg.showModal();
+}
+function openFrames(k, frames, i, title, note) {
+  clearTimeout(storyTimer);
+  const b = BRANDS[k], n = frames.length, f = frames[i];
+  const media = /-st\d/.test(f)
+    ? `<img src="${M(f)}" alt="${esc(title)} ${i + 1}, ${esc(b.name)}">`
+    : `<div class="shared"><img src="${M(f)}" alt="${esc(title)} ${i + 1}, ${esc(b.name)}"></div>`;
+  vbox.className = "vbox " + k;
+  vbox.innerHTML = `<div class="vmedia"><div class="story" style="position:relative"><div class="pbars">${frames.map((_, j) => `<span class="${j < i ? "done" : j === i ? "run" : ""}"><i></i></span>`).join("")}</div>${media}<button class="nav2 prev" aria-label="Sebelumnya" id="sprev">‹</button><button class="nav2 next" aria-label="Berikutnya" id="snext">›</button></div></div>` + side(k, `${title} · ${i + 1} dari ${n}`, note);
+  const go = (j) => openFrames(k, frames, j, title, note);
+  vbox.querySelector("#sprev").onclick = () => go(Math.max(0, i - 1));
+  vbox.querySelector("#snext").onclick = () => (i + 1 < n ? go(i + 1) : dlg.close());
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce) storyTimer = setTimeout(() => (i + 1 < n ? go(i + 1) : null), 5000);
+  if (!dlg.open) dlg.showModal();
+}
+function openStory(k, i) {
+  openFrames(k, BRANDS[k].stories, i, "Story", "Story dipakai untuk polling, promo harian, dan update yang ga perlu masuk feed.");
+}
+function openHighlight(k, h) {
+  const [name, , frames] = BRANDS[k].hl[h];
+  openFrames(k, frames, 0, "Highlight " + name, "Highlight nyimpen story penting di profil, jadi calon pelanggan bisa langsung cek menu, harga, dan promo tanpa scroll feed.");
+}
+document.addEventListener("click", (e) => {
+  const t = e.target.closest(".tile"); if (t) return openPost(t.dataset.k, +t.dataset.i);
+  const s = e.target.closest("[data-story]"); if (s) return openStory(s.dataset.story, +s.dataset.i);
+  const h = e.target.closest("[data-hl]"); if (h) return openHighlight(h.dataset.k, +h.dataset.hl);
+});
+document.getElementById("vclose").onclick = () => dlg.close();
+dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener("close", () => { clearTimeout(storyTimer); vbox.innerHTML = ""; });
+
+// WhatsApp CTA
+const wa = document.getElementById("wa"), note = document.getElementById("wa-note");
+if (WA_NUMBER) {
+  wa.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Halo, saya lihat portofolio LeonardAxelW. Mau tanya untuk usaha saya.")}`;
+  wa.target = "_blank"; wa.rel = "noopener";
+  note.textContent = "WhatsApp: " + WA_DISPLAY;
+} else {
+  wa.setAttribute("aria-disabled", "true");
+  wa.addEventListener("click", (e) => e.preventDefault());
+  note.textContent = "Nomor WhatsApp belum dipasang.";
+}
+</script>
+
+</body>
+</html>
