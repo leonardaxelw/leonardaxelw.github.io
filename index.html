@@ -499,5 +499,54 @@ if (WA_NUMBER) {
 }
 </script>
 
+<!-- Statistik kunjungan pakai GoatCounter: tanpa cookie, tanpa data pribadi.
+     Dashboard: https://leonardaxelw.goatcounter.com
+     Asal pengunjung dibaca dari ?ref= di link, contoh leonardaxelw.github.io/?ref=ig -->
+<script>
+(function () {
+  var SUMBER = { ig: "Instagram", tt: "TikTok", tiktok: "TikTok", wa: "WhatsApp", dm: "DM", grup: "Grup / komunitas", fb: "Facebook", qr: "QR code", pdf: "PDF portofolio", lama: "Link lama" };
+  window.goatcounter = {
+    path: function () { return location.pathname || "/"; },
+    referrer: function () {
+      var q = new URLSearchParams(location.search);
+      var r = (q.get("ref") || q.get("utm_source") || "").toLowerCase();
+      return r ? (SUMBER[r] || r) : document.referrer;
+    }
+  };
+  var antri = [];
+  function kirim(v) {
+    var gc = window.goatcounter;
+    if (!gc || typeof gc.count !== "function") return false;
+    try { gc.count(v); } catch (e) {}
+    return true;
+  }
+  function hitung(nama, judul) {
+    var v = { path: nama, title: judul, event: true };
+    if (!kirim(v)) antri.push(v);
+  }
+  window.gcSiap = function () { while (antri.length) kirim(antri.shift()); };
+  function brand(k) { return BRANDS[k] ? BRANDS[k].name : k; }
+  function slug(k) { return brand(k).toLowerCase().replace(/[^a-z0-9]+/g, "-"); }
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest(".tile"), s = e.target.closest("[data-story]"), h = e.target.closest("[data-hl]");
+    if (t) {
+      var g = BRANDS[t.dataset.k] && BRANDS[t.dataset.k].grid[+t.dataset.i];
+      var jenis = g && g.t === "reel" ? "reel" : g && g.t === "carousel" ? "carousel" : "post";
+      hitung(slug(t.dataset.k) + "-" + jenis, brand(t.dataset.k) + ": buka " + jenis);
+    } else if (s) hitung(slug(s.dataset.story) + "-story", brand(s.dataset.story) + ": buka story");
+    else if (h) hitung(slug(h.dataset.k) + "-highlight", brand(h.dataset.k) + ": buka highlight");
+    if (e.target.closest("#wa") && WA_NUMBER) hitung("klik-whatsapp", "Klik tombol WhatsApp");
+  });
+  var tombolWa = document.getElementById("wa");
+  if (tombolWa && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) {
+      if (es.some(function (x) { return x.isIntersecting; })) { hitung("lihat-kontak", "Scroll sampai tombol WhatsApp"); io.disconnect(); }
+    }, { threshold: 0.6 });
+    io.observe(tombolWa);
+  }
+})();
+</script>
+<script data-goatcounter="https://leonardaxelw.goatcounter.com/count" async src="//gc.zgo.at/count.js" onload="gcSiap()"></script>
+
 </body>
 </html>
