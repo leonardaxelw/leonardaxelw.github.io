@@ -18,7 +18,7 @@
 <title>LeonardAxelW Portofolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&family=League+Gothic&family=Nunito:wght@800;900&family=Playfair+Display:ital,wght@1,800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&family=League+Gothic&family=Archivo+Black&family=Nunito:wght@800;900&family=Playfair+Display:ital,wght@1,800&display=swap">
 <style>
 /* Layout: a neutral studio wall; each client gets a full-width band in its own brand colours, phone profile on one side, the plan on the other. */
 :root {
@@ -86,6 +86,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .kp { --b-bg: #24170f; --b-fg: #faf5ec; --b-acc: #f4b331; --b-mut: #d3c4b1; --b-card: #33241a; --b-line: #4a3628; }
 .pr { --b-bg: #141414; --b-fg: #f0eee9; --b-acc: #e04a3e; --b-mut: #aeaaa2; --b-card: #1f1f1f; --b-line: #333; }
 .kt { --b-bg: #1f4433; --b-fg: #f4ecdf; --b-acc: #f2a46e; --b-mut: #c3d3c4; --b-card: #285641; --b-line: #3a6b55; }
+.mp { --b-bg: #F05A3A; --b-fg: #ffffff; --b-acc: #FFD45C; --b-mut: #FFE0D4; --b-card: #D84A2C; --b-line: #F7876C; }
 .wl { --b-bg: #0f5e5c; --b-fg: #ffffff; --b-acc: #ffd24d; --b-mut: #cdefe6; --b-card: #0b4c4a; --b-line: #2b7472; }
 .case { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 56px; align-items: start; }
 @media (max-width: 960px) { .case { grid-template-columns: 1fr; } .case .phone-col { order: -1; justify-self: center; } }
@@ -95,6 +96,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .kp .bname { font-family: "Playfair Display", Georgia, serif; font-style: italic; font-weight: 800; font-stretch: normal; letter-spacing: -0.01em; }
 .pr .bname { font-family: "League Gothic", "Arial Narrow", sans-serif; font-weight: 400; font-stretch: normal; letter-spacing: .01em; text-transform: uppercase; font-size: clamp(52px, 8vw, 86px); }
 .kt .bname { font-family: var(--f-display); font-weight: 900; font-stretch: 100%; letter-spacing: -0.04em; text-transform: lowercase; }
+.mp .bname { font-family: "Archivo Black", "Archivo", sans-serif; font-weight: 400; font-stretch: normal; letter-spacing: -0.02em; text-transform: uppercase; }
 .wl .bname { font-family: "Nunito", system-ui, sans-serif; font-weight: 900; font-stretch: normal; letter-spacing: -0.03em; }
 .kind { color: var(--b-mut); margin-top: 6px; }
 .kind b { color: var(--b-acc); font-weight: 600; }
@@ -208,7 +210,7 @@ dialog#viewer::backdrop { background: rgba(10,10,10,.82); }
   <header class="top">
     <a class="mark" href="#top"><i></i>LeonardAxelW</a>
     <nav class="nav" aria-label="Bagian halaman">
-      <a href="#kopi-teras">Kopi Teras</a><a href="#pangkas-rapi">Pangkas Rapi</a><a href="#kopi-pagi">Kopi Pagi</a><a href="#wangi-lagi">Wangi Lagi</a><a href="#cara-kerja">Cara kerja</a>
+      <a href="#kopi-teras">Kopi Teras</a><a href="#pangkas-rapi">Pangkas Rapi</a><a href="#kopi-pagi">Kopi Pagi</a><a href="#wangi-lagi">Wangi Lagi</a><a href="#mangkok-penuh">Mangkok Penuh</a><a href="#cara-kerja">Cara kerja</a>
     </nav>
     <a class="btn" href="#kontak">Konsultasi</a>
   </header>
@@ -219,8 +221,8 @@ dialog#viewer::backdrop { background: rgba(10,10,10,.82); }
       <h1 style="margin-top: 14px">Feed rapi. Posting rutin. Owner <em>fokus jualan.</em></h1>
       <p class="lede">Dari rencana konten, desain feed, video Reels, caption, sampai posting dan balas komentar. Setiap usaha dapat gaya visual sendiri, bukan template yang sama.</p>
       <div class="hero-cta"><a class="btn" href="#kopi-teras">Lihat contoh kerja</a><a class="btn ghost" href="#cara-kerja">Cara kerjanya</a></div>
-      <div class="facts"><span>4 contoh brand</span><span>67 desain feed &amp; story</span><span>4 video Reels</span><span>Caption + jadwal posting</span></div>
-      <p class="note">Empat brand di halaman ini contoh konsep untuk menunjukkan cara kerja dan gaya visual, bukan klien nyata. Foto kedua kafe memakai foto stok Unsplash. Render 3D dan ilustrasi dibuat sendiri.</p>
+      <div class="facts"><span>5 contoh brand</span><span>82 desain feed &amp; story</span><span>5 video Reels</span><span>Caption + jadwal posting</span></div>
+      <p class="note">Lima brand di halaman ini contoh konsep untuk menunjukkan cara kerja dan gaya visual, bukan klien nyata. Foto kedua kafe memakai foto stok Unsplash. Render 3D dan ilustrasi dibuat sendiri.</p>
     </div>
     <div class="fan" id="fan"></div>
   </section>
@@ -230,6 +232,7 @@ dialog#viewer::backdrop { background: rgba(10,10,10,.82); }
 <section class="band pr" id="pangkas-rapi" data-brand="pr"></section>
 <section class="band kp" id="kopi-pagi" data-brand="kp"></section>
 <section class="band wl" id="wangi-lagi" data-brand="wl"></section>
+<section class="band mp" id="mangkok-penuh" data-brand="mp"></section>
 
 <div class="wrap">
   <section class="sec" id="cara-kerja">
@@ -281,7 +284,8 @@ const AV = {
   kt: '<svg viewBox="0 0 160 160" width="62%" height="62%" style="border-radius:8px"><rect width="160" height="160" fill="#f4ecdf"/><g fill="#c4532d"><path d="M0 0h40a40 40 0 0 1-40 40z"/><path d="M160 0v40a40 40 0 0 1-40-40z"/><path d="M0 160v-40a40 40 0 0 1 40 40z"/><path d="M160 160h-40a40 40 0 0 1 40-40z"/></g><path d="M80 34l46 46-46 46-46-46z" fill="#1f4433"/><circle cx="80" cy="80" r="14" fill="#f4ecdf"/></svg>',
   kp: '<svg viewBox="0 0 64 64" width="60%" height="60%"><path d="M13 44 A19 19 0 0 1 51 44 Z" fill="#f4b331"/><rect x="6" y="46" width="52" height="4.5" rx="2.2" fill="#faf5ec"/><path d="M26 30c-3.5-4.5 3.5-7 0-12M37 30c-3.5-4.5 3.5-7 0-12" stroke="#faf5ec" stroke-width="3.6" fill="none" stroke-linecap="round"/></svg>',
   pr: '<span style="width:22%;height:56%;border-radius:999px;border:2px solid #f0eee9;background:repeating-linear-gradient(135deg,#c8382e 0 5px,#fff 5px 9px,#2f5da8 9px 14px,#fff 14px 18px)"></span>',
-  wl: '<svg viewBox="0 0 64 64" width="70%" height="70%"><circle cx="32" cy="32" r="30" fill="#fff"/><path d="M32 13c-8 11-13 17-13 24a13 13 0 0 0 26 0c0-7-5-13-13-24z" fill="#0f5e5c"/><path d="M47 13q1 6 6 7-5 1-6 7-1-6-6-7 5-1 6-7z" fill="#ffd24d"/></svg>'
+  wl: '<svg viewBox="0 0 64 64" width="70%" height="70%"><circle cx="32" cy="32" r="30" fill="#fff"/><path d="M32 13c-8 11-13 17-13 24a13 13 0 0 0 26 0c0-7-5-13-13-24z" fill="#0f5e5c"/><path d="M47 13q1 6 6 7-5 1-6 7-1-6-6-7 5-1 6-7z" fill="#ffd24d"/></svg>',
+  mp: '<svg viewBox="0 0 64 64" width="74%" height="74%"><circle cx="32" cy="32" r="30" fill="#FFD45C" stroke="#1D2B4F" stroke-width="3"/><circle cx="25" cy="27" r="4" fill="#C9762E"/><circle cx="33" cy="24" r="4" fill="#C9762E"/><circle cx="41" cy="27" r="4" fill="#C9762E"/><path d="M13 32h38a19 13 0 0 1-38 0z" fill="#fff" stroke="#1D2B4F" stroke-width="3" stroke-linejoin="round"/></svg>'
 };
 const M = (f) => "media/" + f;
 const BRANDS = {
@@ -376,6 +380,29 @@ const BRANDS = {
       { t: "post", img: "wl-s3.jpg", cap: "Kenapa baju putih kami pisahin? Biar ga kebawa luntur dari baju warna.\n\n#wangilagi #tipslaundry" }
     ],
     stories: ["wl-st1.jpg", "wl-st2.jpg", "wl-st3.jpg"]
+  },
+  mp: {
+    name: "Mangkok Penuh", handle: "mangkokpenuh", kind: "Pet food shop", look: "Gaya grafis pop",
+    pitch: "Toko makanan dan perlengkapan kucing & anjing di area perumahan. Pelanggannya pemilik anabul yang ga mau kehabisan stok.",
+    bio: "Makanan, snack & pasir anabul\nAntar 1 jam · gratis ongkir min. 150rb\nBuka setiap hari 08.00–21.00\nLangganan bulanan hemat 10%",
+    hl: [["Harga", "mp-s2.jpg", ["mp-s2.jpg"]], ["Langganan", "mp-s1.jpg", ["mp-s1.jpg", "mp-st3.jpg"]], ["Tips", "mp-c1.jpg", ["mp-c2.jpg", "mp-c3.jpg", "mp-c4.jpg", "mp-c5.jpg"]], ["Antar", "mp-s3.jpg", ["mp-st2.jpg", "mp-s3.jpg"]]],
+    challenge: ["Pelanggan beli di marketplace karena harganya kelihatan lebih murah.", "Banyak yang baru ingat beli pas stok di rumah udah habis."],
+    approach: ["Visual grafis yang cerah dan lucu, gampang dikenali di feed.", "Edukasi yang bikin pemilik anabul percaya: takaran, ganti makanan, pasir.", "Langganan bulanan dan antar 1 jam jadi alasan buat ga pindah ke marketplace."],
+    pillars: [["Edukasi anabul", 35], ["Produk & harga", 25], ["Langganan & antar", 20], ["Maskot & interaksi", 10], ["Promo", 10]],
+    week: [["Sen", "Post"], ["Sel", "Carousel"], ["Rab", "Reels"], ["Kam", "Post"], ["Jum", "Story"], ["Sab", "Reels"], ["Min", "Post"]],
+    tone: "Ceria dan peduli, kayak teman yang juga pelihara kucing.", toneEx: "Mangkoknya penuh, anabulnya tenang.",
+    grid: [
+      { t: "reel", img: "mp-r1.jpg", video: "reel-mangkok-penuh.mp4", cap: "Anabulmu susah makan? Coba cek 3 hal ini dulu: pilih sesuai umur, ganti pelan-pelan 7 hari, dan takar yang pas.\n\n#mangkokpenuh #anabul #makanankucing" },
+      { t: "post", img: "mp-s1.jpg", cap: "Ga pernah kehabisan stok lagi. Langganan Mangkok: makanan dan pasir diantar tiap bulan, hemat 10%. Chat WA buat daftar.\n\n#mangkokpenuh #langganan" },
+      { t: "carousel", img: "mp-c1.jpg", slides: ["mp-c1.jpg", "mp-c2.jpg", "mp-c3.jpg", "mp-c4.jpg", "mp-c5.jpg"], cap: "Mau ganti makanan anabul? Jangan langsung 100%. Pakai aturan 7 hari ini biar perutnya ga kaget. Simpan dulu!\n\n#mangkokpenuh #tipskucing #tipsanjing" },
+      { t: "post", img: "mp-s4.jpg", cap: "Pilih satu: A tim kucing, B tim anjing. Jawab di komentar, sekalian kenalin anabulmu!\n\n#mangkokpenuh #timkucing #timanjing" },
+      { t: "post", img: "mp-s2.jpg", cap: "Harga minggu ini, 24–30 Nov. Stok terbatas, cek dulu lewat WA ya.\n\n#mangkokpenuh #hargamakanankucing" },
+      { t: "post", img: "mp-s5.jpg", cap: "Kebanyakan atau kurang? Ikuti tabel di kemasan, takar pakai sendok takar, bagi 2–3 kali makan sehari.\n\n#mangkokpenuh #takaranmakan" },
+      { t: "post", img: "mp-s3.jpg", cap: "Pesan sebelum jam 8 malam, sampai di rumah dalam 1 jam. Gratis ongkir minimal 150rb.\n\n#mangkokpenuh #antar1jam" },
+      { t: "post", img: "mp-s6.jpg", cap: "Kenalan sama Mochi, penjaga toko paling rajin. Tugas utamanya: tes semua snack baru sebelum dijual.\n\n#mangkokpenuh #kucingoren" },
+      { t: "post", img: "mp-s7.jpg", cap: "Stok baru: pasir gumpal wangi lavender. Ga berdebu, cepat menggumpal, 10 liter cuma 65rb.\n\n#mangkokpenuh #pasirkucing" }
+    ],
+    stories: ["mp-st1.jpg", "mp-st2.jpg", "mp-st3.jpg"]
   }
 };
 
